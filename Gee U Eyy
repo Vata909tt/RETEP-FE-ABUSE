@@ -1,0 +1,465 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local inserttext = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local Textbutton = Instance.new("TextButton")
+local Textbutton_2 = Instance.new("TextButton")
+local Textbutton_3 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.168841138, 0, 0.015625, 0)
+TextLabel.Size = UDim2.new(0, 689, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "RETEP BACKDOOR ABUSE"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ImageLabel.Parent = TextLabel
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 1, 0)
+ImageLabel.Size = UDim2.new(0, 689, 0, 400)
+ImageLabel.Image = "rbxassetid://119387238179755"
+ImageLabel.ImageTransparency = 0.500
+
+inserttext.Name = "inserttext"
+inserttext.Parent = ImageLabel
+inserttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+inserttext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+inserttext.BorderSizePixel = 0
+inserttext.Position = UDim2.new(0.0609579086, 0, 0.0199999996, 0)
+inserttext.Size = UDim2.new(0, 369, 0, 319)
+inserttext.Font = Enum.Font.SourceSans
+inserttext.Text = ""
+inserttext.TextColor3 = Color3.fromRGB(0, 0, 0)
+inserttext.TextSize = 14.000
+inserttext.TextXAlignment = Enum.TextXAlignment.Left
+inserttext.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute.Name = "Execute"
+Execute.Parent = ImageLabel
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0609579086, 0, 0.852500021, 0)
+Execute.Size = UDim2.new(0, 200, 0, 50)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
+
+Textbutton.Name = "Textbutton"
+Textbutton.Parent = ImageLabel
+Textbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Textbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton.BorderSizePixel = 0
+Textbutton.Position = UDim2.new(0.641509414, 0, 0.0199999996, 0)
+Textbutton.Size = UDim2.new(0, 200, 0, 50)
+Textbutton.Font = Enum.Font.SourceSans
+Textbutton.Text = "Retepify"
+Textbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton.TextSize = 14.000
+
+Textbutton_2.Name = "Textbutton"
+Textbutton_2.Parent = ImageLabel
+Textbutton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Textbutton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton_2.BorderSizePixel = 0
+Textbutton_2.Position = UDim2.new(0.641509414, 0, 0.167500004, 0)
+Textbutton_2.Size = UDim2.new(0, 200, 0, 50)
+Textbutton_2.Font = Enum.Font.SourceSans
+Textbutton_2.Text = "Anonymous"
+Textbutton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton_2.TextSize = 14.000
+
+Textbutton_3.Name = "Textbutton"
+Textbutton_3.Parent = ImageLabel
+Textbutton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Textbutton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton_3.BorderSizePixel = 0
+Textbutton_3.Position = UDim2.new(0.641509414, 0, 0.324999988, 0)
+Textbutton_3.Size = UDim2.new(0, 200, 0, 50)
+Textbutton_3.Font = Enum.Font.SourceSans
+Textbutton_3.Text = "Shed"
+Textbutton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Textbutton_3.TextSize = 14.000
+
+-- Scripts:
+
+local function LTMBJPI_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local ButtonPressed = ReplicatedStorage:WaitForChild("RemoteEvent")
+	
+	local textBox = script.Parent.inserttext
+	local button = script.Parent.TextButton
+	
+	button.MouseButton1Click:Connect(function()
+		ButtonPressed:FireServer(textBox.Text)
+	end)
+end
+coroutine.wrap(LTMBJPI_fake_script)()
+local function ENDMF_fake_script() -- Textbutton.LocalScript 
+	local script = Instance.new('LocalScript', Textbutton)
+
+	local button = script.Parent
+	local screenGui = button.Parent
+	local textBox = screenGui:WaitForChild("inserttext")
+	
+	button.MouseButton1Click:Connect(function()
+		textBox.Text = [[
+	local DECAL_ID = "rbxassetid://119387238179755"
+	local SKYBOX_ID = "rbxassetid://119387238179755"
+	local SONG_ID = "rbxassetid://1840712882"
+	
+	-- Apply decal to every BasePart and every face
+	for _, obj in ipairs(workspace:GetDescendants()) do
+		if obj:IsA("BasePart") then
+			for _, face in ipairs(Enum.NormalId:GetEnumItems()) do
+				local decal = Instance.new("Decal")
+				decal.Texture = DECAL_ID
+				decal.Face = face
+				decal.Parent = obj
+			end
+		end
+	end
+	
+	-- Add the skybox
+	local lighting = game:GetService("Lighting")
+	
+	local sky = Instance.new("Sky")
+	sky.Name = "CustomSky"
+	
+	sky.SkyboxBk = SKYBOX_ID
+	sky.SkyboxDn = SKYBOX_ID
+	sky.SkyboxFt = SKYBOX_ID
+	sky.SkyboxLf = SKYBOX_ID
+	sky.SkyboxRt = SKYBOX_ID
+	sky.SkyboxUp = SKYBOX_ID
+	
+	sky.Parent = lighting
+	
+	-- Play the song
+	local soundService = game:GetService("SoundService")
+	
+	local sound = Instance.new("Sound")
+	sound.Name = "CustomSong"
+	sound.SoundId = SONG_ID
+	sound.Volume = 1
+	sound.Looped = true
+	sound.Parent = soundService
+	
+	sound:Play()
+	]]
+	end)
+	
+end
+coroutine.wrap(ENDMF_fake_script)()
+local function FSSQA_fake_script() -- Textbutton_2.LocalScript 
+	local script = Instance.new('LocalScript', Textbutton_2)
+
+	local button = script.Parent
+	local screenGui = button.Parent
+	local textBox = screenGui:WaitForChild("inserttext")
+	
+	button.MouseButton1Click:Connect(function()
+		textBox.Text = [[
+	-- Looping Anonymous Sound (Começa aos 9 segundos + Distorção)
+	local Spooky1 = Instance.new("Sound")
+	Spooky1.Parent = workspace
+	Spooky1.Name = "Anonymousshii"
+	Spooky1.SoundId = "rbxassetid://1840712882"
+	Spooky1.Volume = 10
+	Spooky1.Looped = true
+	
+	local distortion1 = Instance.new("DistortionSoundEffect")
+	distortion1.Level = 1
+	distortion1.Parent = Spooky1
+	
+	Spooky1.Loaded:Wait()
+	Spooky1.TimePosition = 8.6
+	Spooky1:Play()
+	
+	-- Apply Decal to All Sides
+	local decalId = "rbxassetid://127476787"
+	
+	local function applyDecalToAllSides(part)
+		local faces = {
+			Enum.NormalId.Top,
+			Enum.NormalId.Bottom,
+			Enum.NormalId.Left,
+			Enum.NormalId.Right,
+			Enum.NormalId.Front,
+			Enum.NormalId.Back
+		}
+	
+		for _, face in ipairs(faces) do
+			local decal = Instance.new("Decal")
+			decal.Texture = decalId
+			decal.Face = face
+			decal.Parent = part
+		end
+	end
+	
+	for _, part in ipairs(workspace:GetDescendants()) do
+		if part:IsA("BasePart") then
+			applyDecalToAllSides(part)
+		end
+	end
+	
+	-- Skybox
+	local skyId = "rbxassetid://18876121366"
+	
+	local sky = Instance.new("Sky")
+	sky.SkyboxBk = skyId
+	sky.SkyboxDn = skyId
+	sky.SkyboxFt = skyId
+	sky.SkyboxLf = skyId
+	sky.SkyboxRt = skyId
+	sky.SkyboxUp = skyId
+	sky.Parent = game.Lighting
+	
+	-- Fog
+	local lighting = game.Lighting
+	lighting.FogColor = Color3.fromRGB(20, 20, 20)
+	lighting.FogStart = 0
+	lighting.FogEnd = 300
+	
+	-- Repeating Sound Every 10 Seconds
+	task.spawn(function()
+		while true do
+			local repeatSound = Instance.new("Sound")
+			repeatSound.Parent = workspace
+			repeatSound.Name = "RepeatingSound"
+			repeatSound.SoundId = "rbxassetid://0"
+			repeatSound.Volume = 10
+			repeatSound.Looped = false
+	
+			local distortion2 = Instance.new("DistortionSoundEffect")
+			distortion2.Level = 0.99
+			distortion2.Parent = repeatSound
+	
+			repeatSound.Loaded:Wait()
+			repeatSound.TimePosition = 9
+			repeatSound:Play()
+	
+			repeatSound.Ended:Connect(function()
+				repeatSound:Destroy()
+			end)
+	
+			task.wait(10)
+		end
+	end)
+	
+	-- Modifica todas as partes
+	local function exPro(root)
+		for _, v in ipairs(root:GetChildren()) do
+			if v:IsA("BasePart") then
+				v.Material = Enum.Material.Plastic
+				v.Transparency = 0
+				v.Anchored = false
+				v.Locked = false
+			end
+			exPro(v)
+		end
+	end
+	
+	local function asdf(root)
+		for _, v in ipairs(root:GetChildren()) do
+			asdf(v)
+		end
+	end
+	
+	exPro(workspace)
+	asdf(workspace)
+	]]
+	end)
+	
+end
+coroutine.wrap(FSSQA_fake_script)()
+local function IDUX_fake_script() -- Textbutton_3.LocalScript 
+	local script = Instance.new('LocalScript', Textbutton_3)
+
+	local button = script.Parent
+	local screenGui = button.Parent
+	local textBox = screenGui:WaitForChild("inserttext")
+	
+	button.MouseButton1Click:Connect(function()
+		textBox.Text = [[
+	s = Instance.new("Sky")
+	s.Name = "SKY"
+	s.SkyboxBk = "http://www.roblox.com/asset/?id=106862812201643"
+	s.SkyboxDn = "http://www.roblox.com/asset/?id=106862812201643"
+	s.SkyboxFt = "http://www.roblox.com/asset/?id=106862812201643"
+	s.SkyboxLf = "http://www.roblox.com/asset/?id=106862812201643"
+	s.SkyboxRt = "http://www.roblox.com/asset/?id=106862812201643"
+	s.SkyboxUp = "http://www.roblox.com/asset/?id=106862812201643"
+	s.Parent = game.Lighting
+	local c00lkidd1 = Instance.new("Sound", game.SoundService)
+	local c00lkidd2 = Instance.new("Sound", game.SoundService)
+	local c00lkidd3 = Instance.new("Sound", game.SoundService)
+	local c00lkidd4 = Instance.new("Sound", game.SoundService)
+	local c00lkidd5 = Instance.new("Sound", game.SoundService)
+	local c00lkidd6 = Instance.new("Sound", game.SoundService)
+	
+	Instance.new("DistortionSoundEffect", c00lkidd1)
+	Instance.new("DistortionSoundEffect", c00lkidd1)
+	Instance.new("DistortionSoundEffect", c00lkidd1)
+	
+	Instance.new("DistortionSoundEffect", c00lkidd2)
+	Instance.new("DistortionSoundEffect", c00lkidd2)
+	Instance.new("DistortionSoundEffect", c00lkidd2)
+	
+	Instance.new("DistortionSoundEffect", c00lkidd3)
+	Instance.new("DistortionSoundEffect", c00lkidd3)
+	Instance.new("DistortionSoundEffect", c00lkidd3)
+	
+	Instance.new("DistortionSoundEffect", c00lkidd4)
+	Instance.new("DistortionSoundEffect", c00lkidd4)
+	Instance.new("DistortionSoundEffect", c00lkidd4)
+	
+	Instance.new("DistortionSoundEffect", c00lkidd5)
+	Instance.new("DistortionSoundEffect", c00lkidd5)
+	Instance.new("DistortionSoundEffect", c00lkidd5)
+	
+	c00lkidd1.SoundId = "rbxassetid://82020270111776"
+	c00lkidd2.SoundId = "rbxassetid://98507417558287"
+	c00lkidd3.SoundId = "rbxassetid://86474191257848"
+	c00lkidd4.SoundId = "rbxassetid://84113601885842"
+	c00lkidd5.SoundId = "rbxassetid://83282320583623"
+	
+	c00lkidd1.Volume = 10
+	c00lkidd2.Volume = 10
+	c00lkidd3.Volume = 10
+	c00lkidd4.Volume = 10
+	c00lkidd5.Volume = 10
+	
+	c00lkidd1.PlaybackSpeed = 1
+	c00lkidd2.PlaybackSpeed = 1
+	c00lkidd3.PlaybackSpeed = 1
+	c00lkidd4.PlaybackSpeed = 1
+	c00lkidd5.PlaybackSpeed = 1
+	
+	
+	c00lkidd1:Play()
+	
+	c00lkidd1.Ended:Connect(function()
+	c00lkidd2:Play()
+	end)
+	
+	c00lkidd2.Ended:Connect(function()
+	c00lkidd3:Play()
+	end)
+	
+	c00lkidd3.Ended:Connect(function()
+	c00lkidd4:Play()
+	end)
+	
+	c00lkidd4.Ended:Connect(function()
+	c00lkidd5:Play()
+	end)
+	
+	c00lkidd5.Ended:Connect(function()
+	c00lkidd6:Play()
+	end)
+	local ID =18889618673 --id here
+	t1 = "http://www.roblox.com/asset/?id=18343405871"
+	t2 = "http://www.roblox.com/asset/?id=18343405871"
+	t3 = "http://www.roblox.com/asset/?id=18343405871"
+	
+	local p = game.Players:GetChildren()
+	local w = game.Workspace:GetChildren()
+	
+	for i,v in pairs(p) do
+	pe = Instance.new("ParticleEmitter", v.Character.Head)
+	pe.Texture = t3
+	pe.VelocitySpread = 5
+	end
+	]]
+	end)
+	
+end
+coroutine.wrap(IDUX_fake_script)()
+local function CAWY_fake_script() -- TextLabel.DragScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local UIS = game:GetService("UserInputService")
+	
+	local frame = script.Parent
+	local dragToggle = false
+	local dragSpeed = 0.25
+	local dragStart
+	local startPos
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	
+		game:GetService("TweenService"):Create(
+			frame,
+			TweenInfo.new(dragSpeed),
+			{Position = position}
+		):Play()
+	end
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseButton1 
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+				updateInput(input)
+			end
+	
+		end
+	
+	end)
+end
+coroutine.wrap(CAWY_fake_script)()
